@@ -1,0 +1,17 @@
+static void Main(string[] args)
+        {
+            int gold, bill = 2, crystals;
+            Random rand = new Random();
+
+            Console.Write("Сколько у тебя золота: ");
+            gold = Convert.ToInt32(Console.ReadLine());
+
+            crystals = rand.Next(0, gold / 2);
+
+            Console.Write($"В наличии есть {crystals} кристаллов по цене {bill}$\nСколько ты хочешь купить: ");
+            crystals = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write($"Ты приобрел {crystals} кристаллов и у тебя осталось {gold - (bill * crystals)} золота");
+
+            Console.ReadKey();
+        }
